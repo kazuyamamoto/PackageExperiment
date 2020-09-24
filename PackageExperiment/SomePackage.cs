@@ -13,6 +13,9 @@ namespace PackageExperiment
         /// </summary>
         public const string ExportedValue = "hello";
 
+        /// <summary>
+        ///     公開関数。
+        /// </summary>
         public static void ExportedFunction()
         {
             Console.WriteLine("ExportedFunction!");

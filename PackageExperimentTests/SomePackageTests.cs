@@ -14,6 +14,7 @@ namespace PackageExperimentTests
         [Test]
         public void AccessPackageInternal()
         {
+            // InternalVisibleTo 属性を有効にしている 
             Assert.AreEqual("World", SomePackage.InternalValue);
         }
     }
