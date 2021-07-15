@@ -24,5 +24,13 @@ namespace PackageExperimentTests
             // Assert.AreEqual("Japan", SomePackage.PrivateValue); // コンパイルエラー
             Assert.AreEqual("World", SomePackage.GetInternalValue());
         }
+
+        [Test]
+        public void AccessOuterFieldsViaMethods()
+        {
+            var ei = new SomePackage.ExportedImpl();
+            Assert.AreEqual("World", ei.GetOuterInternalValue());
+            Assert.AreEqual("Japan", ei.GetOuterPrivateValue());
+        }
     }
 }

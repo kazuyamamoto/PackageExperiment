@@ -19,6 +19,16 @@ namespace PackageExperiment
             {
                 Console.WriteLine("hello world");
             }
+
+            public string GetOuterInternalValue()
+            {
+                return InternalValue;
+            }
+
+            public string GetOuterPrivateValue()
+            {
+                return PrivateValue;
+            }
         }
 
         internal const string InternalValue = "World";
