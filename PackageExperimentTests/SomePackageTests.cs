@@ -17,5 +17,12 @@ namespace PackageExperimentTests
             // InternalVisibleTo 属性を有効にしている 
             Assert.AreEqual("World", SomePackage.InternalValue);
         }
+
+        [Test]
+        public void AccessViaMethods()
+        {
+            // Assert.AreEqual("Japan", SomePackage.PrivateValue); // コンパイルエラー
+            Assert.AreEqual("World", SomePackage.GetInternalValue());
+        }
     }
 }

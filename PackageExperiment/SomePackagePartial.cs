@@ -22,5 +22,17 @@ namespace PackageExperiment
         }
 
         internal const string InternalValue = "World";
+
+        private const string PrivateValue = "Japan";
+
+        public static string GetInternalValue()
+        {
+            return InternalValue;
+        }
+
+        public static string GetPrivateValue()
+        {
+            return PrivateValue;
+        }
     }
 }

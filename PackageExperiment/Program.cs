@@ -6,8 +6,7 @@ namespace PackageExperiment
     {
         private static void Main()
         {
-            // var ic = new SomePackage.UnexportedClass(); コンパイルエラー!
-            
+            // var uc = new SomePackage.UnexportedClass(); // コンパイルエラー!
             var ec = new SomePackage.ExportedClass();
             ec.Print();
 
