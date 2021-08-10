@@ -44,7 +44,7 @@ namespace PackageExperiment
             /// <exception cref="ExportedException">必ずスローする。</exception>
             public void Throw()
             {
-                throw new ExportedException();
+                throw new ExportedException(_unexported.ToString());
             }
         }
 
@@ -70,6 +70,9 @@ namespace PackageExperiment
         /// <summary>
         ///     公開例外クラス。
         /// </summary>
-        public class ExportedException : Exception { }
+        public class ExportedException : Exception
+        {
+            public ExportedException(string msg) : base(msg) { }
+        }
     }
 }

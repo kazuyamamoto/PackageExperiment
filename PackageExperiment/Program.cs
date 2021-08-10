@@ -18,19 +18,19 @@ namespace PackageExperiment
             {
                 Console.WriteLine(e);
             }
-            
+
             Console.WriteLine(SomePackage.ExportedValue);
             SomePackage.ExportedFunction();
-            
+
             SomePackage.IExported ei = new SomePackage.ExportedImpl();
             ei.Hello();
-            
+
             ei = new ExternalImpl();
             ei.Hello();
         }
     }
 
-    class ExternalImpl : SomePackage.IExported
+    internal class ExternalImpl : SomePackage.IExported
     {
         public void Hello()
         {

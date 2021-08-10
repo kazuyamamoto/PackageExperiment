@@ -8,6 +8,20 @@ namespace PackageExperiment
     /// </summary>
     public static partial class SomePackage
     {
+        internal const string InternalValue = "World";
+
+        private const string PrivateValue = "Japan";
+
+        public static string GetInternalValue()
+        {
+            return InternalValue;
+        }
+
+        public static string GetPrivateValue()
+        {
+            return PrivateValue;
+        }
+
         public interface IExported
         {
             public void Hello();
@@ -29,20 +43,6 @@ namespace PackageExperiment
             {
                 return PrivateValue;
             }
-        }
-
-        internal const string InternalValue = "World";
-
-        private const string PrivateValue = "Japan";
-
-        public static string GetInternalValue()
-        {
-            return InternalValue;
-        }
-
-        public static string GetPrivateValue()
-        {
-            return PrivateValue;
         }
     }
 }
